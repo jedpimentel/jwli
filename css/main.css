@@ -1,0 +1,679 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+/* Box Model Hack */
+ * {
+      -moz-box-sizing: border-box; /* Firexfox */
+      -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+      box-sizing: border-box; /* IE */
+ }
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+body {
+  font-family: sans-serif;
+  font-family: 'PT Sans', sans-serif;
+}
+body > * {
+  /* TODO: finish using custom padding values, then remove this block */
+  padding: 0 5%;
+}
+#hero {
+  /* sizing is weird, but it's something, would probably have to go over its resizing with the designer */
+  /* TODO: give this a background color with transparency, for then the text covors the background image */
+  background-image: url(../img/shadow-lady.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 5%;
+}
+#hero h1 {
+  font-size: 1.8em;
+  text-align: center;
+}
+#hero h2 {
+  font-size: 1.15em;
+}
+#hero p {
+  font-size: 0.85em;
+}
+#hero section img {
+  /* logo */
+  height: 4em;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+#hero > section{
+  max-width: 30em;
+  float: left;
+}
+#hero form input[type="text"] {
+  margin: 0;
+  width: 60%;
+  float: left;
+}
+#hero form input[type="submit"] {
+  margin: 0;
+  width: 30%;
+  float: right;
+}
+
+
+/*
+body, body > *, body > * > * {
+  border: 1px solid black;
+  min-height: 1em;
+}
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+
+header {
+  padding: 1em 4%;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header nav ul li {
+  float: left;
+  width: 12.5%; /* an eight, since they are eight of them */
+}
+header nav ul li > * {
+  display: block;
+  text-align: center;
+}
+
+.twinText > div {
+  width: 50%;
+  /*padding: 0 1em;*/
+  /*padding was moved to inner <p> as a margin*/
+  float: left;
+}
+
+#empower {
+  padding: 4% 11%;
+}
+#empower > h1, #empower > p {
+  text-align: center;
+  padding: 0 0rem;
+}
+#empower > h1 {
+  font-size: 1.7em;
+}
+#empower > p {
+  font-style: italic;
+  font-size: 0.9em;
+}
+.pinkStripe {
+    height: 0.25rem;
+    width: 60%;
+    background-color: #ffddf0;
+    margin: 0 0.5rem;
+}
+#empower .twinText p {
+  margin: 0 1rem;
+}
+
+#history {
+  padding: 4%;
+}
+#history h1 {
+  margin: 0;
+  font-size: 1.6em;
+}
+#history > .textBox {
+  width: 60%;
+  float: left;
+}
+#history > .imageBox {
+  width: 40%;
+  float: left;
+  text-align: center;
+  font-style: italic;
+  padding: 0 2rem;
+}
+#history > .imageBox img {
+  width: 100%;
+}
+
+#whoWeAre {
+  padding: 0 4%;
+}
+#whoWeAre > h1 {
+  font-size: 1.7em;
+  text-align: center;
+}
+/* first article after this ID's h1 article about Atsuko */
+#whoWeAre > h1 + section {
+  /* this is supposed to have a blur outwords from the block */
+  border: 1px solid #8f9ca3;
+  padding: 1em 0;
+  margin-bottom: 3em;
+}
+#whoWeAre > h1 + section > img {
+  padding: 0 2.7em;
+  width: 33.3333%;
+  float: left;
+}
+#whoWeAre > h1 + section > div {
+  padding-right: 1.35rem;
+  width: 66.6666%;
+  float: left;
+}
+#whoWeAre > section h1 {
+  font-size: 1em;
+}
+#whoWeAre > section + section {
+  width: 48%;
+  float: left;
+  margin: 1%;
+  margin-bottom: 3em;
+}
+
+body > form {
+  padding: 0 10%;
+}
+body > form h2, body > form input {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  margin: 0.6em 0;
+}
+body > form h2 {
+  float: left;
+}
+body > form div {
+  float: right;
+}
+body > form input[type="text"] {
+  padding: 0 1em;
+}
+body > form input[type="submit"] {
+  margin-left: 1.2em;
+  padding: 0  2em;
+}
+footer {
+  padding: 0 10%;
+}
+
+footer nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer nav > ul > li {
+  float: left;
+}
+#upperFooter, footer nav {
+  font-size: 0.85em;
+  padding: 1.7em 0;
+  border-bottom: 1px solid white;
+}
+footer nav {
+  margin: auto;
+}
+#upperFooter p {
+  float: left;
+}
+#upperFooter ul {
+  float: right;
+}
+#upperFooter ul li + li {
+  margin-left: 1.5em;
+}
+footer nav ul {
+  /*border: 1px solid pink;*/
+}
+footer nav > ul > li {
+  /*TODO CHECK IF THIS IS BREAKING STUFF */
+  /*width: calc( (100% / 6) - (3.2em / 6) ); */
+  /*border: 1px solid white;*/
+}
+footer nav > ul > li:last-child {
+  /* width: 3.2em; */
+}
+footer nav > ul li {
+  /* font-size: 0.9em; */
+  font-weight: bold;
+
+}
+footer nav > ul li + li {
+  font-weight: normal;
+}
+footer nav > ul > li + li {
+  margin-left: calc( ( 100% - 34em ) / 6 );
+}
+
+#copyright {
+  /* is a <p> */
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+#externalLinks {
+  /* is a <ul> */
+  float: right;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#externalLinks li {
+  float: left;
+}
+
+/*
+  C O L O R S
+
+  black: #333942
+  white: white
+
+  light-gray: #f1f3f5
+  medium-gray: #b8c5d0
+  dark-gray: #8f9ca3
+
+  pink: #ffddf0
+
+*/
+a:hover {
+  color: #ffddf0;
+}
+
+header {
+  background-color: white;
+  color: #333942;
+}
+#applyButton {
+  background-color: #333942;
+  color: white;
+}
+.blackOnGray {
+  background-color: #f1f3f5;
+  color: #333942;
+}
+.blackOnWhite {
+  background-color: white;
+  color: #333942;
+}
+.whiteOnGray {
+  background-color: #8f9ca3;
+  color: white;
+}
+.grayOnWhite {
+  background-color: white;
+  color: #8f9ca3;
+}
+.grayOnGray {
+  background-color: #f1f3f5;
+  color: #8f9ca3;
+}
+#hero form input[type="text"], #hero form input[type="submit"] {
+  border: 1px solid #8f9ca3;
+  border-radius: 3px;
+}
+#hero form input[type="submit"] {
+  background-color: #b8c5d0;
+  color: #f1f3f5;
+}
+body > form {
+  background-color: #b8c5d0;
+  color: white;
+}
+body > form input[type="text"], body > form input[type="submit"] {
+  border: 1px solid #8f9ca3;
+  border-radius: 3px;
+}
+body > form input[type="text"] {
+  background-color: white;
+  color: #b8c5d0;
+}
+body > form input[type="submit"] {
+  background-color:  #8f9ca3;
+  color: white;
+}
+body {
+  /* delete this block when done */
+  border: 1px solid black;
+}
+
+/*
+    B R E A K   P O I N T S
+    =======================
+    730px footer: copyright text crashes with facebook et al links
+    650px footer nav margins too close, clumns no longer "fit" side-by-side
+    600px "twin" sections are too thin, pics too small
+
+    TODO: fix pic stretchyness/margin so they scale better, they could look
+     better right before their responsiveness "kicks in"
+
+    1em = 16px;
+*/
+
+@media only screen and (max-width: 45.625em) {
+  #upperFooter {
+    text-align: center;
+    width: 100%;
+  }
+  #upperFooter p {
+    width: 100%;
+  }
+  #upperFooter p, #upperFooter ul {
+    display: inline-block;
+    float: none;
+  }
+}
+@media only screen and (max-width: 40.625em) {
+  footer nav > ul > li {
+    float: none;
+  }
+  footer nav > ul > li + li {
+    margin-left: 0;
+    margin-top: 1em;
+  }
+}
+#burger {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  header nav ul li {
+    display: none;
+  }
+  #burger, header nav ul li:last-child {
+    width: 4em;
+    border: 1px solid #333942;
+    display: block;
+  }
+  header nav ul li:last-child {
+    float: right;
+  }
+  #empower {
+      padding: 4% 4%;
+  }
+  #whoWeAre > section + section {
+    width: 98%;
+  }
+  #whoWeAre > h1 + section > img {
+    width: 100%;
+  }
+  #whoWeAre > h1 + section > div {
+    width: 100%;
+    padding: 1.35rem;
+
+  }
+  #history > .textBox {
+    width: 100%;
+  }
+  #history > .imageBox {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
